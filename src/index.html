@@ -12,10 +12,10 @@
         <h2>Add Bill</h2>
         <form action="">
             <label for="nameInput">Name</label>
-            <input type="text" name="nameInput" id="js-name-input">
+            <input type="text" name="nameInput" id="js-name-input" placeholder="Name">
 
             <label for="amountInput">Amount</label>
-            <input type="text" name="amountInput" id="js-amount-input">
+            <input type="text" name="amountInput" id="js-amount-input" placeholder="Amount">
 
             <label for="dateInput">Date</label>
             <input type="date" name="dateInput" id="js-date-input">
@@ -25,11 +25,31 @@
                 <option value="a">A</option>
                 <option value="b">B</option>
                 <option value="c">C</option>
+                <option value="" selected></option>
             </select>
             <br/>
-            <input type="button" value="resetAction">
-            <input type="button" value="saveAction">
+            <input type="button" value="resetAction" id="js-reset-btn">
+            <input type="button" value="saveAction" id="js-save-btn">
         </form>
+    </div>
+    <div id="js-allBills-container">
+        <h2>All Bills</h2>
+        <table id="js-tableBills-container">
+            <tbody id="js-tableBody-content">
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                </tr>
+                <tr class="tableRowElement">
+                    <td>Element name 1</td>
+                    <td>Element type 1</td>
+                    <td>Element date 1</td>
+                    <td>Element amount 1</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <script src="js/script.js"></script>
 </body>
