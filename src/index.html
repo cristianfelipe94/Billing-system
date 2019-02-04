@@ -8,7 +8,29 @@
     <title>Bill System</title>
 </head>
 <body>
-    <div id="container"></div>
+    <div id="js-addAction-container">
+        <h2>Add Bill</h2>
+        <form action="">
+            <label for="nameInput">Name</label>
+            <input type="text" name="nameInput" id="js-name-input">
+
+            <label for="amountInput">Amount</label>
+            <input type="text" name="amountInput" id="js-amount-input">
+
+            <label for="dateInput">Date</label>
+            <input type="date" name="dateInput" id="js-date-input">
+
+            <label for="nameInput">Type</label>
+            <select name="itemType" id="js-type-input">
+                <option value="a">A</option>
+                <option value="b">B</option>
+                <option value="c">C</option>
+            </select>
+            <br/>
+            <input type="button" value="resetAction">
+            <input type="button" value="saveAction">
+        </form>
+    </div>
     <script src="js/script.js"></script>
 </body>
 </html>
