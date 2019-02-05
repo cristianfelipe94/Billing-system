@@ -7,6 +7,10 @@
     const inputDate = document.getElementById('js-date-input');
     const inputType = document.getElementById('js-type-input');
 
+    const nameSortBtn = document.getElementById('js-name-order');
+    const amountSortBtn = document.getElementById('js-amount-order');
+    const typeSortBtn = document.getElementById('js-type-order');
+
     const resetBtn = document.getElementById('js-reset-btn');
     const saveBtn = document.getElementById('js-save-btn');
 
@@ -18,6 +22,10 @@
     const arrayTypeA = [0];
     const arrayTypeB = [0];
     const arrayTypeC = [0];
+
+    let toggleNameState = true;
+    let toggleTypeState = true;
+    let toggleAmountState = true;
 
     function NewBill(nameKey, typeKey, dateKey, amountKey) {
         this.nameKey = nameKey;
@@ -75,21 +83,18 @@
             const sumTotal = amountParsed + amountTotalParsed;
             arrayTypeA.pop();
             arrayTypeA.push(sumTotal);
-            console.log(arrayTypeA);
         } else if (elementTypeKey === 'B') {
             const amountParsed = parseInt(elementAmountKey, 0);
             const amountTotalParsed = parseInt(arrayTypeB[0], 0);
             const sumTotal = amountParsed + amountTotalParsed;
             arrayTypeB.pop();
             arrayTypeB.push(sumTotal);
-            console.log(arrayTypeB);
         } else if (elementTypeKey === 'C') {
             const amountParsed = parseInt(elementAmountKey, 0);
             const amountTotalParsed = parseInt(arrayTypeC[0], 0);
             const sumTotal = amountParsed + amountTotalParsed;
             arrayTypeC.pop();
             arrayTypeC.push(sumTotal);
-            console.log(arrayTypeC);
         }
     }
 
@@ -99,6 +104,110 @@
         inputDate.value = '';
         inputType.value = '';
     }
+
+    function sortByNameForward() {
+        const sortedByName = billsArray.sort(function (a, b) {
+            const nameOne = a.nameKey.toUpperCase();
+            const nameTwo = b.nameKey.toUpperCase();
+            if (nameOne < nameTwo) {
+                return -1;
+            } else if ( nameOne > nameTwo) {
+                return 1;
+            } else return 0;
+        });
+        return sortedByName;
+    }
+
+    function sortByNameBackward() {
+        const sortedByName = billsArray.sort(function (a, b) {
+            const nameOne = a.nameKey.toUpperCase();
+            const nameTwo = b.nameKey.toUpperCase();
+            if (nameOne > nameTwo) {
+                return -1;
+            } else if ( nameOne < nameTwo) {
+                return 1;
+            } else return 0;
+        });
+        return sortedByName;
+    }
+
+    function sortByTypeForward() {
+        const sortedByType = billsArray.sort(function (a, b) {
+            const typeOne = a.typeKey.toUpperCase();
+            const typeTwo = b.typeKey.toUpperCase();
+                if (typeOne < typeTwo) {
+                    return -1;
+                } else if ( typeOne > typeTwo) {
+                    return 1;
+                } else {
+                    return 0;
+                }
+        });
+        return sortedByType;
+    }
+
+    function sortByTypeBackward() {
+        const sortedByType = billsArray.sort(function (a, b) {
+            const typeOne = a.typeKey.toUpperCase();
+            const typeTwo = b.typeKey.toUpperCase();
+                if (typeOne > typeTwo) {
+                    return -1;
+                } else if ( typeOne < typeTwo) {
+                    return 1;
+                } else {
+                    return 0;
+                }
+        });
+        return sortedByType;
+    }
+
+    function sortByAmountForward() {
+        const sortedByAmount = billsArray.sort(function (a, b) {
+            return a.amountKey - b.amountKey;
+        });
+        return sortedByAmount;
+    }
+
+    function sortByAmountBackward() {
+        const sortedByAmount = billsArray.sort(function (a, b) {
+            return b.amountKey - a.amountKey;
+        });
+        return sortedByAmount;
+    }
+
+    nameSortBtn.addEventListener('click', function () {
+        tableContent.innerHTML = '';
+        if (toggleNameState === true) {
+            createBillDom(sortByNameForward());
+            toggleNameState = false;
+        } else if (toggleNameState === false) {
+            createBillDom(sortByNameBackward());
+            toggleNameState = true;
+        }
+    });
+
+    typeSortBtn.addEventListener('click', function () {
+        tableContent.innerHTML = '';
+        if (toggleTypeState === true) {
+            createBillDom(sortByTypeForward());
+            toggleTypeState = false;
+        } else if (toggleTypeState === false) {
+            createBillDom(sortByTypeBackward());
+            toggleTypeState = true;
+        }
+    });
+
+    amountSortBtn.addEventListener('click', function () {
+        tableContent.innerHTML = '';
+        if (toggleAmountState === true) {
+            createBillDom(sortByAmountForward());
+            toggleAmountState = false;
+        } else if (toggleAmountState === false) {
+            createBillDom(sortByAmountBackward());
+            toggleAmountState = true;
+        }
+    });
+
 
     resetBtn.addEventListener('click', function () {
         resetValues();
@@ -138,6 +247,7 @@
             );
 
             billsArray.push(newBillElement);
+            console.log(billsArray);
 
             tableContent.innerHTML = '';
             totalContent.innerHTML = '';
