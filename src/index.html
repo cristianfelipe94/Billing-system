@@ -8,14 +8,15 @@
     <title>Bill System</title>
 </head>
 <body>
+
     <div id="js-addAction-container">
         <h2>Add Bill</h2>
         <form action="">
             <label for="nameInput">Name</label>
-            <input type="text" name="nameInput" id="js-name-input" placeholder="Name">
+            <input type="text" name="nameInput" id="js-name-input" placeholder="Name" minlength="4" maxlength="15">
 
             <label for="amountInput">Amount</label>
-            <input type="text" name="amountInput" id="js-amount-input" placeholder="Amount">
+            <input type="number" name="amountInput" id="js-amount-input" placeholder="Amount" min="0">
 
             <label for="dateInput">Date</label>
             <input type="date" name="dateInput" id="js-date-input">
@@ -32,22 +33,29 @@
             <input type="button" value="saveAction" id="js-save-btn">
         </form>
     </div>
+
     <div id="js-allBills-container">
         <h2>All Bills</h2>
         <table id="js-tableBills-container">
-            <tbody id="js-tableBody-content">
                 <tr>
                     <th>Name</th>
                     <th>Type</th>
                     <th>Date</th>
                     <th>Amount</th>
                 </tr>
-                <tr class="tableRowElement">
-                    <td>Element name 1</td>
-                    <td>Element type 1</td>
-                    <td>Element date 1</td>
-                    <td>Element amount 1</td>
-                </tr>
+            <tbody id="js-tableBody-content">
+            </tbody>
+        </table>
+    </div>
+
+    <div id="js-billTotal-container">
+        <h2>Table Total</h2>
+        <table id="js-tableSum-container">
+            <tr>
+                <th>Bill type</th>
+                <th>Total</th>
+            </tr>
+            <tbody id="js-totalBody-content">
             </tbody>
         </table>
     </div>
