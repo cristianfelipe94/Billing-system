@@ -32,10 +32,10 @@ body {
     border-radius: 5px;
     height: 20px;
     margin: 1rem;
-    transition: 0.6s ease;
+    transition: 2s ease;
     &:hover {
         background-color: #529893;
-        transition: 0.6s ease;
+        transition: 1s ease;
     }
 }
 
@@ -44,7 +44,20 @@ body {
     font-size: 15px;
     width: 49%;
     cursor: pointer;
+    transition: 2s ease;
     &:hover {
+        background-color: #529893;
+        transition: 1s ease;
+    }
+}
+
+.title-hover {
+    opacity: 1;
+    padding: 5px;
+    transition: 2s ease;
+    &:hover {
+        opacity: 0.6;
+        transition: 1s ease;
         background-color: #529893;
     }
 }
@@ -52,4 +65,12 @@ body {
 .table-cells {
     border-right: 1px solid #529893;
     padding: 25px;
+}
+
+.table-rows {
+    transition: 1s ease;
+    &:hover {
+        transition: 1s ease;
+        background-color: #C9CFB9;
+    }
 }

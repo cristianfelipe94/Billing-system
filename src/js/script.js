@@ -36,6 +36,8 @@
                 newTableCellValue.setAttribute('class', 'table-cells');
 
                 newTableRow.appendChild(newTableCellValue);
+                newTableRow.setAttribute('class', 'table-rows');
+
 
                 tableContent.appendChild(newTableRow);
             }
@@ -53,6 +55,7 @@
 
             newAmountCellValue.setAttribute('class', 'table-cells');
             newTypeCellValue.setAttribute('class', 'table-cells');
+            newTableRow.setAttribute('class', 'table-rows');
 
             newTableRow.appendChild(newTypeCellValue);
             newTableRow.appendChild(newAmountCellValue);
@@ -66,21 +69,21 @@
     // Parameters: elementTypeKey = Type of bill.
     // Parameters: elementAmountKey = New amount to be added.
     function createTotalBillDom(elementTypeKey, elementAmountKey) {
-        if (elementTypeKey === 'a') {
+        if (elementTypeKey === 'A') {
             const amountParsed = parseInt(elementAmountKey, 0);
             const amountTotalParsed = parseInt(arrayTypeA[0], 0);
             const sumTotal = amountParsed + amountTotalParsed;
             arrayTypeA.pop();
             arrayTypeA.push(sumTotal);
             console.log(arrayTypeA);
-        } else if (elementTypeKey === 'b') {
+        } else if (elementTypeKey === 'B') {
             const amountParsed = parseInt(elementAmountKey, 0);
             const amountTotalParsed = parseInt(arrayTypeB[0], 0);
             const sumTotal = amountParsed + amountTotalParsed;
             arrayTypeB.pop();
             arrayTypeB.push(sumTotal);
             console.log(arrayTypeB);
-        } else if (elementTypeKey === 'c') {
+        } else if (elementTypeKey === 'C') {
             const amountParsed = parseInt(elementAmountKey, 0);
             const amountTotalParsed = parseInt(arrayTypeC[0], 0);
             const sumTotal = amountParsed + amountTotalParsed;
