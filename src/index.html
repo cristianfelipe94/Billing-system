@@ -5,59 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <title>Bill System</title>
 </head>
 <body>
 
-    <div id="js-addAction-container">
-        <h2>Add Bill</h2>
-        <form action="">
-            <label for="nameInput">Name</label>
-            <input type="text" name="nameInput" id="js-name-input" placeholder="Name" minlength="4" maxlength="15">
+    <div class="bill-system-container">
 
-            <label for="amountInput">Amount</label>
-            <input type="number" name="amountInput" id="js-amount-input" placeholder="Amount" min="0">
+        <div id="js-addAction-container" class="add-action-container">
+            <h2>Add Bill</h2>
+            <form action="">
 
-            <label for="dateInput">Date</label>
-            <input type="date" name="dateInput" id="js-date-input">
+                <div class="form-block">
+                    <label for="nameInput">Name</label>
+                    <input type="text" name="nameInput" id="js-name-input" class="input-color" placeholder="Name" minlength="4" maxlength="15">
+                    <br/>
 
-            <label for="nameInput">Type</label>
-            <select name="itemType" id="js-type-input">
-                <option value="a">A</option>
-                <option value="b">B</option>
-                <option value="c">C</option>
-                <option value="" selected></option>
-            </select>
-            <br/>
-            <input type="button" value="resetAction" id="js-reset-btn">
-            <input type="button" value="saveAction" id="js-save-btn">
-        </form>
-    </div>
+                    <label for="amountInput">Amount</label>
+                    <input type="number" name="amountInput" id="js-amount-input" class="input-color" placeholder="Amount" min="0">
+                </div>
+                <div class="form-block">
+                    <label for="dateInput">Date</label>
+                    <input type="date" name="dateInput" id="js-date-input" class="input-color">
+                    <br/>
 
-    <div id="js-allBills-container">
-        <h2>All Bills</h2>
-        <table id="js-tableBills-container">
+                    <label for="nameInput">Type</label>
+                    <select name="itemType" id="js-type-input" class="input-color">
+                        <option value="a">A</option>
+                        <option value="b">B</option>
+                        <option value="c">C</option>
+                        <option selected></option>
+                    </select>
+                </div>
+                <br/>
+                <input type="button" value="Reset" id="js-reset-btn" class="btn-color">
+                <input type="button" value="Save" id="js-save-btn" class="btn-color">
+            </form>
+        </div>
+
+        <div id="js-allBills-container" class="add-action-container">
+            <h2>All Bills</h2>
+            <table id="js-tableBills-container">
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                    </tr>
+                <tbody id="js-tableBody-content">
+                </tbody>
+            </table>
+        </div>
+
+        <div id="js-billTotal-container" class="add-action-container">
+            <h2>Table Total</h2>
+            <table id="js-tableSum-container">
                 <tr>
-                    <th>Name</th>
-                    <th>Type</th>
-                    <th>Date</th>
-                    <th>Amount</th>
+                    <th>Bill type</th>
+                    <th>Total</th>
                 </tr>
-            <tbody id="js-tableBody-content">
-            </tbody>
-        </table>
-    </div>
-
-    <div id="js-billTotal-container">
-        <h2>Table Total</h2>
-        <table id="js-tableSum-container">
-            <tr>
-                <th>Bill type</th>
-                <th>Total</th>
-            </tr>
-            <tbody id="js-totalBody-content">
-            </tbody>
-        </table>
+                <tbody id="js-totalBody-content">
+                </tbody>
+            </table>
+        </div>
     </div>
     <script src="js/script.js"></script>
 </body>

@@ -33,6 +33,7 @@
                 const newTableCellValue = document.createElement('td');
 
                 newTableCellValue.innerHTML = element[keyValue];
+                newTableCellValue.setAttribute('class', 'table-cells');
 
                 newTableRow.appendChild(newTableCellValue);
 
@@ -49,6 +50,9 @@
 
             newAmountCellValue.innerHTML = element;
             newTypeCellValue.innerHTML = billTypeKey;
+
+            newAmountCellValue.setAttribute('class', 'table-cells');
+            newTypeCellValue.setAttribute('class', 'table-cells');
 
             newTableRow.appendChild(newTypeCellValue);
             newTableRow.appendChild(newAmountCellValue);
