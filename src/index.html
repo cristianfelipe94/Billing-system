@@ -20,15 +20,14 @@
                     <label for="nameInput">Name</label>
                     <input type="text" name="nameInput" id="js-name-input" class="input-color" placeholder="Name" minlength="4" maxlength="15">
                     <br/>
-
                     <label for="amountInput">Amount</label>
                     <input type="number" name="amountInput" id="js-amount-input" class="input-color" placeholder="Amount" min="0">
                 </div>
+
                 <div class="form-block">
                     <label for="dateInput">Date</label>
                     <input type="date" name="dateInput" id="js-date-input" class="input-color">
                     <br/>
-
                     <label for="nameInput">Type</label>
                     <select name="itemType" id="js-type-input" class="input-color">
                         <option value="A">A</option>
@@ -37,6 +36,7 @@
                         <option selected></option>
                     </select>
                 </div>
+
                 <br/>
                 <input type="button" value="Reset" id="js-reset-btn" class="btn-color">
                 <input type="button" value="Save" id="js-save-btn" class="btn-color">
@@ -46,12 +46,12 @@
         <div id="js-allBills-container" class="add-action-container">
             <h2 class="title-hover">All Bills</h2>
             <table id="js-tableBills-container">
-                    <tr>
-                        <th id="js-name-order" class="btn-order-color">Name</th>
-                        <th id="js-type-order" class="btn-order-color">Type</th>
-                        <th class="tabs-table-padding">Date</th>
-                        <th id="js-amount-order" class="btn-order-color">Amount</th>
-                    </tr>
+                <tr>
+                    <th id="js-name-order" class="btn-order-color">Name</th>
+                    <th id="js-type-order" class="btn-order-color">Type</th>
+                    <th class="tabs-table-padding">Date</th>
+                    <th id="js-amount-order" class="btn-order-color">Amount</th>
+                </tr>
                 <tbody id="js-tableBody-content">
                 </tbody>
             </table>
@@ -68,6 +68,7 @@
                 </tbody>
             </table>
         </div>
+
     </div>
     <script src="js/script.js"></script>
 </body>
