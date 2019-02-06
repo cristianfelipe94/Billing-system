@@ -11,7 +11,8 @@ body {
   width: 80%;
   margin: 10vh auto;
   padding: 3em;
-  background-color: #E6E6D7; }
+  background-color: #E6E6D7;
+  border: 1px solid #51dbc4; }
 
 .add-action-container {
   border: 1px solid #C9CFB9;
@@ -38,6 +39,7 @@ body {
   font-size: 15px;
   width: 49%;
   cursor: pointer;
+  border-radius: 2px;
   transition: 2s ease; }
   .btn-color:hover {
     background-color: #529893;
@@ -51,6 +53,17 @@ body {
     opacity: 0.6;
     transition: 1s ease;
     background-color: #529893; }
+
+.btn-order-color {
+  transition: 1s ease;
+  cursor: pointer;
+  padding: 10px; }
+  .btn-order-color:hover {
+    transition: 1s ease;
+    background-color: #C9CFB9; }
+
+.tabs-table-padding {
+  padding: 10px; }
 
 .table-cells {
   border-right: 1px solid #529893;

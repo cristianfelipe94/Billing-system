@@ -232,7 +232,7 @@
 
     saveBtn.addEventListener('click', function () {
         if (checkInputs()) {
-            alert("Error por favor segurese de ingresar toda la información.");
+            alert('Error por favor segurese de ingresar toda la información.');
         } else if (!checkInputs()) {
             const newTableCellName = inputName.value;
             const newTableCellType = inputType.value;
@@ -247,7 +247,6 @@
             );
 
             billsArray.push(newBillElement);
-            console.log(billsArray);
 
             tableContent.innerHTML = '';
             totalContent.innerHTML = '';
@@ -263,5 +262,4 @@
             resetValues();
         }
     });
-
-} ());
+}());

@@ -1,3 +1,5 @@
+// Global Styles.
+/////////////////
 body {
     height: 100vh;
     width: 100vw;
@@ -13,6 +15,7 @@ body {
     margin: 10vh auto;
     padding: 3em;
     background-color: #E6E6D7;
+    border: 1px solid #51dbc4;
 }
 
 .add-action-container {
@@ -44,6 +47,7 @@ body {
     font-size: 15px;
     width: 49%;
     cursor: pointer;
+    border-radius: 2px;
     transition: 2s ease;
     &:hover {
         background-color: #529893;
@@ -60,6 +64,20 @@ body {
         transition: 1s ease;
         background-color: #529893;
     }
+}
+
+.btn-order-color {
+    transition: 1s ease;
+    cursor: pointer;
+    padding: 10px;
+    &:hover {
+        transition: 1s ease;
+        background-color: #C9CFB9;
+    }
+}
+
+.tabs-table-padding {
+    padding: 10px;
 }
 
 .table-cells {
