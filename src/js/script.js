@@ -207,7 +207,6 @@
         }
     });
 
-
     resetBtn.addEventListener('click', function () {
         resetValues();
     });
