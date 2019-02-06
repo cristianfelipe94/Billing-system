@@ -46,7 +46,6 @@
                 newTableRow.appendChild(newTableCellValue);
                 newTableRow.setAttribute('class', 'table-rows');
 
-
                 tableContent.appendChild(newTableRow);
             }
         });
