@@ -62,6 +62,18 @@ body {
     transition: 1s ease;
     background-color: #C9CFB9; }
 
+.btn-order-color-active-forw {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #B0D0CD;
+  transition: 1s ease; }
+
+.btn-order-color-active-backw {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #71AAA6;
+  transition: 1s ease; }
+
 .tabs-table-padding {
   padding: 10px; }
 

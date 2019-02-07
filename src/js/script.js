@@ -177,9 +177,15 @@
     nameSortBtn.addEventListener('click', function () {
         tableContent.innerHTML = '';
         if (toggleNameState === true) {
+            nameSortBtn.setAttribute('class', 'btn-order-color-active-forw');
+            typeSortBtn.setAttribute('class', 'btn-order-color');
+            amountSortBtn.setAttribute('class', 'btn-order-color');
             createBillDom(sortByNameForward());
             toggleNameState = false;
         } else if (toggleNameState === false) {
+            typeSortBtn.setAttribute('class', 'btn-order-color');
+            amountSortBtn.setAttribute('class', 'btn-order-color');
+            nameSortBtn.setAttribute('class', 'btn-order-color-active-backw');
             createBillDom(sortByNameBackward());
             toggleNameState = true;
         }
@@ -188,9 +194,15 @@
     typeSortBtn.addEventListener('click', function () {
         tableContent.innerHTML = '';
         if (toggleTypeState === true) {
+            typeSortBtn.setAttribute('class', 'btn-order-color-active-forw');
+            nameSortBtn.setAttribute('class', 'btn-order-color');
+            amountSortBtn.setAttribute('class', 'btn-order-color');
             createBillDom(sortByTypeForward());
             toggleTypeState = false;
         } else if (toggleTypeState === false) {
+            nameSortBtn.setAttribute('class', 'btn-order-color');
+            amountSortBtn.setAttribute('class', 'btn-order-color');
+            typeSortBtn.setAttribute('class', 'btn-order-color-active-backw');
             createBillDom(sortByTypeBackward());
             toggleTypeState = true;
         }
@@ -199,9 +211,15 @@
     amountSortBtn.addEventListener('click', function () {
         tableContent.innerHTML = '';
         if (toggleAmountState === true) {
+            amountSortBtn.setAttribute('class', 'btn-order-color-active-forw');
+            typeSortBtn.setAttribute('class', 'btn-order-color');
+            nameSortBtn.setAttribute('class', 'btn-order-color');
             createBillDom(sortByAmountForward());
             toggleAmountState = false;
         } else if (toggleAmountState === false) {
+            typeSortBtn.setAttribute('class', 'btn-order-color');
+            nameSortBtn.setAttribute('class', 'btn-order-color');
+            amountSortBtn.setAttribute('class', 'btn-order-color-active-backw');
             createBillDom(sortByAmountBackward());
             toggleAmountState = true;
         }
@@ -249,7 +267,7 @@
             tableContent.innerHTML = '';
             totalContent.innerHTML = '';
 
-            createBillDom(billsArray);
+            createBillDom(sortByNameForward());
 
             createTotalBillDom(newTableCellType, newTableCellAmount);
 
